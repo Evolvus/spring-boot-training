@@ -25,6 +25,7 @@
 		<camel.version>2.17.7</camel.version>
 		<apache.poi.version>3.15</apache.poi.version>
 		<apache.poi.schema.version>1.3</apache.poi.schema.version>
+        <jasypt.spring.boot.starter.version>2.0.0</jasypt.spring.boot.starter.version>
 
 		<!-- plugin versions -->
 		<maven.enforcer.plugin.version>3.0.0-M3</maven.enforcer.plugin.version>
@@ -52,31 +53,37 @@
 		<module>../spring-simplest</module>
 		<module>../spring-simplest-web</module>
 		<module>../spring-simplest-web-jdbc</module>
+		<module>../spring-jasypt</module>
 	</modules>
 
 	<dependencyManagement>
-	  <dependencies>
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-spring-boot-starter</artifactId>
-			<version>${camel.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-spring-batch</artifactId>
-			<version>${camel.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>${apache.poi.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>ooxml-schemas</artifactId>
-			<version>${apache.poi.schema.version}</version>
-		</dependency>
-	  </dependencies>
+		<dependencies>
+			<dependency>
+				<groupId>com.github.ulisesbocchio</groupId>
+				<artifactId>jasypt-spring-boot-starter</artifactId>
+				<version>${jasypt.spring.boot.starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-spring-boot-starter</artifactId>
+				<version>${camel.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-spring-batch</artifactId>
+				<version>${camel.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>${apache.poi.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>ooxml-schemas</artifactId>
+				<version>${apache.poi.schema.version}</version>
+			</dependency>
+		</dependencies>
 	</dependencyManagement>
 	<build>
 		<pluginManagement>
