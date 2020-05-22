@@ -6,7 +6,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
-@Order(4000)
+@Order(5000)
 public class RunnerTwo implements CommandLineRunner {
 
 	@Value("${sampletext}")
